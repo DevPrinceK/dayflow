@@ -1,0 +1,66 @@
+name: dayflow
+description: "DayFlow is a daily planning and productivity app that helps users plan, organize, execute, and track their daily activities, with intelligent alerts that prevent missed tasks."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.10.7 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # Icons
+  cupertino_icons: ^1.0.8
+  phosphor_flutter: ^2.0.0
+
+  # State Management
+  flutter_riverpod: 2.5.1
+  riverpod: 2.5.1
+  riverpod_annotation: 2.3.5
+
+  # Navigation
+  go_router: ^13.0.0
+
+  # Database
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  path_provider: ^2.1.1
+  path: ^1.8.3
+
+  # Local Notifications & Permissions
+  flutter_local_notifications: ^19.5.0
+  permission_handler: ^11.0.0
+  timezone: ^0.10.0
+
+  # Utils
+  intl: ^0.19.0
+  uuid: ^4.4.0
+  equatable: ^2.0.5
+  freezed_annotation: ^2.4.1
+  json_annotation: ^4.9.0
+  shared_preferences: ^2.2.3
+  
+  # UI
+  google_fonts: ^6.2.1
+  flutter_animate: ^4.5.0
+  table_calendar: ^3.1.2
+  gap: ^3.0.1
+  flutter_slidable: ^3.1.0
+  fl_chart: ^1.1.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  
+  # Code Generation
+  build_runner: ^2.4.6
+  riverpod_generator: ^2.4.0
+  hive_generator: ^2.0.1
+  freezed: ^2.4.5
+  json_serializable: ^6.7.1
+
+flutter:
+  uses-material-design: true
