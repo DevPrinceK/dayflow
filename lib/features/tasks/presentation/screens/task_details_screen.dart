@@ -14,7 +14,7 @@ class TaskDetailsScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     // Watch task updates
-    finaltasksAsync = ref.watch(dailyTasksProvider(task.date));
+    final tasksAsync = ref.watch(dailyTasksProvider(task.date));
     final currentTask =
         tasksAsync.value?.where((t) => t.id == task.id).firstOrNull ?? task;
 
