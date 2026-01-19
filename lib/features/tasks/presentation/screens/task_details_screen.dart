@@ -173,7 +173,7 @@ class TaskDetailsScreen extends ConsumerWidget {
                           constraints: const BoxConstraints(minHeight: 120),
                           padding: const EdgeInsets.all(24),
                           decoration: BoxDecoration(
-                            color: const Color(0xFFF7F9FC),
+                            color: AppColors.backgroundLight,
                             borderRadius: BorderRadius.circular(20),
                           ),
                           child: Text(
@@ -429,11 +429,11 @@ class TaskDetailsScreen extends ConsumerWidget {
   Color _getPriorityColor(TaskPriority priority) {
     switch (priority) {
       case TaskPriority.high:
-        return const Color(0xFFFF4B4B); // Bright Red
+        return AppColors.priorityHigh;
       case TaskPriority.medium:
-        return const Color(0xFFFFB302); // Amber
+        return AppColors.priorityMedium;
       case TaskPriority.low:
-        return const Color(0xFF4CAF50); // Green
+        return AppColors.priorityLow;
     }
   }
 
@@ -456,17 +456,6 @@ class TaskDetailsScreen extends ConsumerWidget {
         return 'In Progress';
       default:
         return status.name.capitalize();
-    }
-  }
-
-  Color _getPriorityColor(TaskPriority priority) {
-    switch (priority) {
-      case TaskPriority.high:
-        return AppColors.priorityHigh;
-      case TaskPriority.medium:
-        return AppColors.priorityMedium;
-      case TaskPriority.low:
-        return AppColors.priorityLow;
     }
   }
 }
