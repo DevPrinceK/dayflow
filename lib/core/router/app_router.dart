@@ -1,3 +1,4 @@
+import 'package:dayflow/features/splash/presentation/screens/splash_screen.dart';
 import 'package:dayflow/features/tasks/presentation/screens/analytics_screen.dart';
 import 'package:dayflow/features/tasks/presentation/screens/edit_task_screen.dart';
 import 'package:dayflow/features/tasks/presentation/screens/home_screen.dart';
@@ -11,8 +12,12 @@ part 'app_router.g.dart';
 @riverpod
 GoRouter goRouter(GoRouterRef ref) {
   return GoRouter(
-    initialLocation: '/',
+    initialLocation: '/splash',
     routes: [
+      GoRoute(
+        path: '/splash',
+        builder: (context, state) => const SplashScreen(),
+      ),
       GoRoute(path: '/', builder: (context, state) => const HomeScreen()),
       GoRoute(
         path: '/analytics',
